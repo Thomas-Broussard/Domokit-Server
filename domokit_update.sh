@@ -1,38 +1,33 @@
+
 #!bin/bash
 
-version_online=$(curl https://raw.githubusercontent.com/Thomas-Broussard/Domokit-Server/master/version)
-version_locale=$(cat version)
+# telechargement du dossier
+wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
 
-echo "version actuelle :" $version_locale
-echo "dernière version :" $version_online
+#decompression
+unzip -o master.zip
 
-# on vérifie que la mise à jour est réalisable
-if [ $version_online = $version_locale ]
-then
-	echo "Votre Box est à jour."
-else
-	echo "Téléchargement de la version " $version_online "..."
+#remise a niveau
+mv -f Domokit-Server-master Update
 
-	# telechargement du dossier
-	wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
+# repartition des fichiers dans les zone associées
 
-	#decompression
-	unzip -o master.zip
+# --- Fichiers d'update ---
+mv -f Update/check_update.sh .
+mv -f Update/domokit_update.sh .
+mv -f Update/version .
 
-	#renommage
-	mv -f Domokit-Server-master Update
+# --- Interface Web ---
+#mv -f Update/web /var/www/html/DomoKit
 
-	# repartition des fichiers dans les zone associées
+# --- NodeRed ---
+#mv -f Update/nodered /home/pi/.node-red
 
-	# --- Interface Web ---
-	#mv -r -f Update/web /var/www/html/DomoKit
+# --- Scripts ---
+#mv -f Update/scripts /home/pi/.domokit
 
-	# --- NodeRed ---
-	#mv -f Update/nodered /home/pi/.node-red
+#suppression de l'archive et du dossier généré
+rm master.zip
+rm -r Update/
 
-	# --- Scripts ---
-	#mv -f Update/scripts /home/pi/.domokit
-
-	#suppression de l'archive
-	rm master.zip
-fi
+exit 0
