@@ -23,10 +23,10 @@ rm -r /var/www/html/DomoKit
 mv -f Update/web /var/www/html/DomoKit
 
 # --- NodeRed ---
-mv -f Update/nodered /home/pi/.node-red
+mv -f -v Update/nodered/* /home/pi/.node-red/
 
 # --- Scripts ---
-mv -f Update/scripts /home/pi/.domokit/scripts
+mv -f -v Update/scripts/* /home/pi/.domokit/scripts/
 
 # --- Fichiers d'update ---
 mv -f Update/check_update.sh .
