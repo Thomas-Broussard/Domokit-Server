@@ -14,7 +14,7 @@ then
 
     # 2 - Comparaison des versions (online et locale)
     version_online=$(curl https://raw.githubusercontent.com/Thomas-Broussard/Domokit-Server/master/version)
-    version_locale=$(cat version || echo "0.0.0")
+    version_locale=$(cat /home/pi/.domokit/version || echo "0.0.0")
 
     echo "version actuelle :" $version_locale
     echo "dernière version disponible:" $version_online

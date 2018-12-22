@@ -19,9 +19,7 @@ mv -f /home/pi/.domokit/Domokit-Server-master /home/pi/.domokit/Update
 
 echo "Installation de la mise à jour..."
 
-# Mise en pause des services
-sudo service apache2 stop
-sudo service nodered stop
+
 
 # --- Interface Web ---
 sudo rm -r /var/www/html/DomoKit
@@ -48,9 +46,8 @@ echo "Suppression des fichiers temporaires"
 rm /home/pi/.domokit/master.zip
 rm -r /home/pi/.domokit/Update/
 
-# reprise des services
-sudo service apache2 start
-sudo service nodered start
-
 echo "Mise à jour effectuée avec succès"
+echo "Redémarrage de la Box Domokit"
+sudo reboot now
+
 exit 0
