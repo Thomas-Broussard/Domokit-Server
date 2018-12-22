@@ -26,7 +26,7 @@ mv -f Update/web /var/www/html/DomoKit
 mv -f Update/nodered /home/pi/.node-red
 
 # --- Scripts ---
-mv -f Update/scripts /home/pi/.domokit
+mv -f Update/scripts /home/pi/.domokit/scripts
 
 # --- Fichiers d'update ---
 mv -f Update/check_update.sh .
