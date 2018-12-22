@@ -1,7 +1,11 @@
 
 #!bin/bash
 
+# Mise en pause des services
+sudo service apache2 stop
+sudo service nodered stop
 # telechargement du dossier
+echo "Téléchargemen en cours..."
 wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
 
 #decompression
@@ -19,17 +23,21 @@ mv -f Update/domokit_update.sh .
 mv -f Update/version .
 
 # --- Interface Web ---
-#mv -f Update/web /var/www/html/DomoKit
+rm -r /var/www/html/DomoKit
+mv -f Update/web /var/www/html/DomoKit
 
 # --- NodeRed ---
-#mv -f Update/nodered /home/pi/.node-red
+mv -f Update/nodered /home/pi/.node-red
 
 # --- Scripts ---
-#mv -f Update/scripts /home/pi/.domokit
+mv -f Update/scripts /home/pi/.domokit
 
 #suppression de l'archive et du dossier généré
 echo "Suppression des fichiers temporaires"
 rm master.zip
 rm -r Update/
 
+# reprise des services
+sudo service apache2 start
+sudo service nodered start
 exit 0
