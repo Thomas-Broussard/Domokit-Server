@@ -5,7 +5,7 @@
 sudo service apache2 stop
 sudo service nodered stop
 # telechargement du dossier
-echo "Téléchargemen en cours..."
+echo "Téléchargement en cours..."
 wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
 
 #decompression
@@ -19,14 +19,16 @@ mv -f Domokit-Server-master Update
 echo "Installation de la mise à jour..."
 
 # --- Interface Web ---
-rm -r /var/www/html/DomoKit
+sudo rm -r /var/www/html/DomoKit
 mv -f Update/web /var/www/html/DomoKit
 
 # --- NodeRed ---
-mv -f -v Update/nodered/* /home/pi/.node-red/
+sudo rm -r /home/pi/.node-red/
+mv -f Update/nodered/ /home/pi/.node-red/
 
 # --- Scripts ---
-mv -f -v Update/scripts/* /home/pi/.domokit/scripts/
+sudo rm -r /home/pi/.domokit/scripts/
+mv -f Update/scripts/ /home/pi/.domokit/scripts/
 
 # --- Fichiers d'update ---
 mv -f Update/check_update.sh .
@@ -45,4 +47,6 @@ rm -r Update/
 # reprise des services
 sudo service apache2 start
 sudo service nodered start
+
+echo "Mise à jour effectuée avec succès"
 exit 0
