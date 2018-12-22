@@ -2,23 +2,26 @@
 #!bin/bash
 
 # script à lancer en sudo !
-# Mise en pause des services
-sudo service apache2 stop
-sudo service nodered stop
+
 # telechargement du dossier
 cd /home/pi/.domokit/
 echo "Téléchargement en cours..."
-wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip -O /home/pi/.domokit/master.zip
+wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip -P /home/pi/.domokit/
 
 #decompression
-unzip -o master.zip
+echo "Téléchargement terminé. Décompression des fichiers..."
+unzip -o master.zip  > /dev/null 2>&1
 
-#remise a niveau
+#changement de dossiers
 mv -f /home/pi/.domokit/Domokit-Server-master /home/pi/.domokit/Update
 
 # repartition des fichiers dans les zone associées
 
 echo "Installation de la mise à jour..."
+
+# Mise en pause des services
+sudo service apache2 stop
+sudo service nodered stop
 
 # --- Interface Web ---
 sudo rm -r /var/www/html/DomoKit
