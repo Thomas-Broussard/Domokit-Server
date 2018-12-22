@@ -17,10 +17,6 @@ mv -f Domokit-Server-master Update
 # repartition des fichiers dans les zone associées
 
 echo "Installation de la mise à jour..."
-# --- Fichiers d'update ---
-mv -f Update/check_update.sh .
-mv -f Update/domokit_update.sh .
-mv -f Update/version .
 
 # --- Interface Web ---
 rm -r /var/www/html/DomoKit
@@ -31,6 +27,15 @@ mv -f Update/nodered /home/pi/.node-red
 
 # --- Scripts ---
 mv -f Update/scripts /home/pi/.domokit
+
+# --- Fichiers d'update ---
+mv -f Update/check_update.sh .
+mv -f Update/domokit_update.sh .
+mv -f Update/version .
+
+# On effectue une conversion dos2unix pour s'assurer que les scripts fonctionnent la prochaine fois
+dos2unix check_update.sh
+dos2unix domokit_update.sh
 
 #suppression de l'archive et du dossier généré
 echo "Suppression des fichiers temporaires"
