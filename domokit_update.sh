@@ -5,6 +5,7 @@
 sudo service apache2 stop
 sudo service nodered stop
 # telechargement du dossier
+cd /home/pi/.domokit/
 echo "Téléchargement en cours..."
 wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
 
@@ -12,7 +13,7 @@ wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
 unzip -o master.zip
 
 #remise a niveau
-mv -f Domokit-Server-master Update
+mv -f /home/pi/.domokit/Domokit-Server-master /home/pi/.domokit/Update
 
 # repartition des fichiers dans les zone associées
 
@@ -20,28 +21,28 @@ echo "Installation de la mise à jour..."
 
 # --- Interface Web ---
 sudo rm -r /var/www/html/DomoKit
-mv -f Update/web /var/www/html/DomoKit
+mv -f /home/pi/.domokit/Update/web /var/www/html/DomoKit
 
 # --- NodeRed ---
-cp -r -f Update/nodered/* /home/pi/.node-red/
+cp -r -f /home/pi/.domokit/Update/nodered/* /home/pi/.node-red/
 
 # --- Scripts ---
 #sudo rm -r /home/pi/.domokit/scripts/
-cp -r -f Update/scripts/* /home/pi/.domokit/scripts/
+cp -r -f /home/pi/.domokit/Update/scripts/* /home/pi/.domokit/scripts/
 
 # --- Fichiers d'update ---
-mv -f Update/check_update.sh .
-mv -f Update/domokit_update.sh .
-mv -f Update/version .
+mv -f /home/pi/.domokit/Update/check_update.sh /home/pi/.domokit/
+mv -f /home/pi/.domokit/Update/domokit_update.sh /home/pi/.domokit/
+mv -f /home/pi/.domokit/Update/version /home/pi/.domokit/
 
 # On effectue une conversion dos2unix pour s'assurer que les scripts fonctionnent la prochaine fois
-dos2unix check_update.sh
-dos2unix domokit_update.sh
+dos2unix /home/pi/.domokit/check_update.sh
+dos2unix /home/pi/.domokit/domokit_update.sh
 
 #suppression de l'archive et du dossier généré
 echo "Suppression des fichiers temporaires"
-rm master.zip
-rm -r Update/
+rm /home/pi/.domokit/master.zip
+rm -r /home/pi/.domokit/Update/
 
 # reprise des services
 sudo service apache2 start
