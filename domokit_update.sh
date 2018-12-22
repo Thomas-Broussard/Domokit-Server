@@ -1,13 +1,14 @@
 
 #!bin/bash
 
+# script à lancer en sudo !
 # Mise en pause des services
 sudo service apache2 stop
 sudo service nodered stop
 # telechargement du dossier
 cd /home/pi/.domokit/
 echo "Téléchargement en cours..."
-wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip
+wget https://github.com/Thomas-Broussard/Domokit-Server/archive/master.zip -O /home/pi/.domokit/master.zip
 
 #decompression
 unzip -o master.zip
