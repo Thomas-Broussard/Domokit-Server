@@ -21,8 +21,11 @@ if ($_SESSION['authenticated'] != true) {header('Location: '.$rootpath.'Connexio
 
 $error_wifi  = $_SESSION['error_wifi'];
 $error_reset = $_SESSION['error_reset'];
+$error_update = $_SESSION['error_update'];
 $success_wifi  = $_SESSION['success_wifi'];
 $success_reset = $_SESSION['success_reset'];
+$success_update = $_SESSION['success_update'];
+
 // Déchargement du $_POST
 unset($_POST);
 $_POST = array();

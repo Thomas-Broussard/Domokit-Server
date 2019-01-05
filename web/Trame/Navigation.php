@@ -23,7 +23,7 @@
                     <?php
                         // Arborescence de navigation
                         $Tree  = $rootpath."Tree";
-                        $Base_URL = "http://".$_SERVER['SERVER_ADDR'];
+                        $Base_URL = "http://" . $_SERVER['SERVER_NAME'];//"http://".$_SERVER['SERVER_ADDR'];
 
                         $Menu1 = $Tree."/MenuPrincipal";
                         $SousMenu1A = $Menu1."/MesObjets";
@@ -158,7 +158,7 @@
                     <!--                                      COPYRIGHTS                                -->
                     <!-- ############################################################################## -->
                     <h3 class="menu-title">Copyright</h3><!-- /.menu-title -->
-                    <li><a href="https://www.linkedin.com/in/thomas-broussard-463b85129">&copy; 2018 Thomas Broussard</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/thomas-broussard-463b85129">&copy; 2018 Thomas Broussard</a></li>
                 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
                 </ul>
             </div>

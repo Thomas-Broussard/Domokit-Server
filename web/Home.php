@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DomoticPi - Template</title>
+    <title>Domokit - Template</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,6 +59,8 @@
         <div class="content mt-3">
 
 		
+        
+
         </div> 
 
     </div>

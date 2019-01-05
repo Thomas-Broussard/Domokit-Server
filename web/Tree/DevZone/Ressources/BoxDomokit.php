@@ -9,7 +9,7 @@ $_POST = array();
  *                 PARAMETRES DE LA PAGE 
  * ###################################################### */
 // Titre de la page
-$Titre_Page = "Fabriquez votre propre Box Domokit !";
+$Titre_Page = "Envie de fabriquer votre Box Domokit ?";
 
 // Chemin relatif d'accès aux fichiers, par rapport au dossier Tree
 $rootpath = "../../../";
