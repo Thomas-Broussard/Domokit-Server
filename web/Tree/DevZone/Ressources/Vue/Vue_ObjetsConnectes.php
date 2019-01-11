@@ -75,7 +75,7 @@
 
                                 </p>
 
-                                <h3> 
+                                <h3>
                                     Bon codage ! <i class="far fa-smile"></i>
                                 </h3>
                                 <p></p>
@@ -92,7 +92,8 @@
                                 <div class="card-header">
                                     Prérequis
                                 </div>
-                                <p class="card-text">Hop hop hop ! Assurez vous d'avoir accès aux outils suivant avant de vous lancer dans la fabrication :
+                                <p class="card-text">Hop hop hop ! Assurez vous d'avoir accès aux outils suivant avant
+                                    de vous lancer dans la fabrication :
                                 </p>
                             </center>
 
@@ -223,7 +224,39 @@
                 <!--                                  RANGEE NUMERO 3                              -->
                 <!-- ============================================================================== -->
                 <div class="row">
+                    <!-- ############################################################################## -->
+                    <!--                             Détecteur de flammes                           -->
+                    <!-- ############################################################################## -->
+                    <div class="col-xs-12 col-sm-6 col-md-4  d-flex align-items-stretch">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src=<?php echo $imagepath.'Detecteur_Flamme.png'?> alt="Photo non
+                            disponible
+                            :(">
+                            <div class="card-body">
+                                <center>
+                                    <h5 class="card-title">Détecteur de flammes</h5>
+                                </center>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fa fas fa-flask"></i> Difficulté :
+                                        Intermédiaire</li>
+                                    <li class="list-group-item"><i class="fa fas fa-clock"></i> Durée : 1 heure 30 </li>
+                                </ul>
+                                </br>
+                                <center>
+                                    <a href=<?php echo $downloadpath."Detecteur_Flamme.zip"?> class="btn btn-primary"
+                                        role="button">
+                                        <i class="fa fas fa-download"></i> Télécharger
+                                    </a>
+                                    </a>
 
+                                    <p>Restez alerté en cas de problème :</p>
+                                    <p>Apprenez à fabriquer un détecteur de flamme !</p>
+
+                                </center>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

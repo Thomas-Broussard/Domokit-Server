@@ -127,10 +127,6 @@
                                 <a href=<?php echo $SousMenu2A."/ObjetsConnectes.php"?>>Objets Connectés</a>
                             </li>
 
-                            <li><i class="fa fa-file"></i> 
-                                <a href=<?php echo $SousMenu2A."/Documentations.php"?>>Documentations</a>
-                            </li>
-
                             <li><i class="fa fa-download"></i> 
                                 <a href=<?php echo $SousMenu2A."/Logiciels.php"?>>Logiciels</a>
                             </li>

@@ -15,7 +15,7 @@ $Titre_Page = "Envie de fabriquer votre Box Domokit ?";
 $rootpath = "../../../";
 
 // Menu de navigation en cours d'utilisation 
-$Menu_Actif = "Accueil";
+$Menu_Actif = "SousMenu2A";
 
 /* ######################################################
  *                 	  ACCES A LA PAGE 

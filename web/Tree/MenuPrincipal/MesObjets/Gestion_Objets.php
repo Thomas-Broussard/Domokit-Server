@@ -12,7 +12,7 @@ $Titre_Page = "Gestion des Objets";
 $rootpath = "../../../";
 
 // Menu de navigation en cours d'utilisation 
-$Menu_Actif = "SousMenu1B";
+$Menu_Actif = "SousMenu1A";
 
 
 /* ######################################################

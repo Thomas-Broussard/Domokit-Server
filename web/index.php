@@ -71,6 +71,9 @@
             <?php $imagepath = $rootpath."images/domokit/carousel/"; ?>
             <?php $avatarpath = $rootpath."images/avatar/"; ?>
 
+            <?php $image_doc_path = $rootpath."images/domokit/"; ?>
+            <?php $downloadpath = $rootpath."Download/"; ?>
+
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12  d-flex align-items-stretch">
@@ -133,6 +136,31 @@
                 <!-- ============================================================================== -->
 
                 <div class="row">
+
+                    <!-- ############################################################################## -->
+                    <!--                             Start Guide                         -->
+                    <!-- ############################################################################## -->
+                    <div class="col-xs-12 col-sm-6 col-md-4  d-flex align-items-stretch">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src=<?php echo $image_doc_path.'Documentation.png'?> alt="Photo non
+                            disponible
+                            :(">
+                            <div class="card-body">
+                                <center>
+                                    <h5 class="card-title">Guides de démarrage</h5>
+                                    <a href=<?php echo $downloadpath."Documentation.zip"?> class="btn btn-primary"
+                                        role="button">
+                                        <i class="fa fas fa-download"></i> Télécharger
+                                    </a>
+                                    </a>
+
+                                    <p>Prenez facilement en main votre box Domokit grâce aux manuels utilisateurs et administrateurs</p>
+
+                                </center>
+
+                            </div>
+                        </div>
+                    </div>
                     <!-- ############################################################################## -->
                     <!--                            Thomas Broussard                -->
                     <!-- ############################################################################## -->
@@ -142,7 +170,7 @@
                                 <center>
                                     <a href="https://www.linkedin.com/in/thomas-broussard-463b85129/">
                                         <img class="rounded-circle" src=<?php echo $avatarpath.'Thomas_Broussard.png'?>
-                                            alt="Photo non disponible :(" width="140" height="140">
+                                        alt="Photo non disponible :(" width="140" height="140">
                                     </a>
                                     <h2>Thomas</h2>
                                     <h2>Broussard</h2>

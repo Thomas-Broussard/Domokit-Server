@@ -15,7 +15,7 @@ $Titre_Page = "Créez vos objets connectés !";
 $rootpath = "../../../";
 
 // Menu de navigation en cours d'utilisation 
-$Menu_Actif = "Accueil";
+$Menu_Actif = "SousMenu2A";
 
 
 /* ######################################################
