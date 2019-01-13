@@ -150,6 +150,12 @@
                         </ul>
                     </li>
 
+
+                    <li>
+                        <a href="mailto:domokit.dev@gmail.com?subject=[BUG DOMOKIT]&body=Décrivez-nous le bug que vous avez rencontré"> <i class="menu-icon fa fa-bug"></i>Signaler un Bug </a>
+                    </li>
+
+
                     <!-- ############################################################################## -->
                     <!--                                      COPYRIGHTS                                -->
                     <!-- ############################################################################## -->
